@@ -1,4 +1,4 @@
-package com.inappminiprogram;
+package com.app.iamp;
 
 import com.facebook.react.ReactActivity;
 

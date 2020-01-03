@@ -1,5 +1,6 @@
 package com.app.iamp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -58,5 +59,9 @@ public class StartActivity extends AppCompatActivity implements NormalAdapter.On
     @Override
     public void onItemClick(int position) {
         Log.i("Start", "Click on " + position + " with data \"" + data[position] + "\"");
+        if (position == 0) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 }

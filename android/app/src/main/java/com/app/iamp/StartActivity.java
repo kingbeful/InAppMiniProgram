@@ -41,6 +41,8 @@ public class StartActivity extends AppCompatActivity implements NormalAdapter.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
+        JsBundleLoader.INSTANCE.load(getApplication());
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this );
         //设置布局管理器
@@ -61,6 +63,9 @@ public class StartActivity extends AppCompatActivity implements NormalAdapter.On
         Log.i("Start", "Click on " + position + " with data \"" + data[position] + "\"");
         if (position == 0) {
             Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        } else if (position == 1) {
+            Intent intent = new Intent(this, ReactBaseActivity.class);
             startActivity(intent);
         }
     }

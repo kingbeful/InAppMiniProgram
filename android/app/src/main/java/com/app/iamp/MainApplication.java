@@ -21,17 +21,28 @@ public class MainApplication extends Application implements ReactApplication {
           return BuildConfig.DEBUG;
         }
 
-        @Override
-        protected List<ReactPackage> getPackages() {
-          @SuppressWarnings("UnnecessaryLocalVariable")
-          List<ReactPackage> packages = new PackageList(this).getPackages();
-          // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
-          return packages;
-        }
+          @Override
+          protected List<ReactPackage> getPackages() {
+              @SuppressWarnings("UnnecessaryLocalVariable")
+              List<ReactPackage> packages = new PackageList(this).getPackages();
+              // Packages that cannot be autolinked yet can be added manually here, for example:
+              // packages.add(new MyReactNativePackage());
+              return packages;
+          }
 
-        @Override
-        protected String getJSMainModuleName() {
+//          @Override
+//          protected String getJSBundleFile () {
+//              return JsBundleLoader.INSTANCE.getBasicBundle(getApplication(), getBundleAssetName());
+//          }
+
+          @Override
+          protected String getBundleAssetName() {
+            Logger.i("loading basic");
+            return "index.android.bundle";
+          }
+
+          @Override
+          protected String getJSMainModuleName() {
           return "index";
         }
       };
@@ -45,7 +56,7 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
-    initializeFlipper(this); // Remove this line if you don't want Flipper enabled
+    //initializeFlipper(this); // Remove this line if you don't want Flipper enabled
   }
 
   /**

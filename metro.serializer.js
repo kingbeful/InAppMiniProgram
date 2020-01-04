@@ -75,7 +75,12 @@ function processModuleFilter(module) {
       如InitializeCore.js。每次加载bundle文件时都需要用到。
     */
     if ('js' + pathSep + 'script' + pathSep + 'virtual' == module['output'][0]['type']) {
+      console.log(module['path'],' will in the pack')
       return true;
+    }
+    if (module['path'].indexOf('node_modules' + pathSep + 'react-native' + pathSep + 'Libraries' ) > 0) {
+      console.log(module['path'],' will in the pack(as Library)')
+      return true
     }
     return false;
   }

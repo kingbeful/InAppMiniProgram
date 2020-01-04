@@ -1,7 +1,7 @@
 const pathSep = require('path').sep;
 const md5 = require('js-md5');
-//是否加密
-const isEncrypt = true;
+//是否MD5
+const isMD5 = false;
 
 function createModuleIdFactory() {
   //获取命令行执行的目录，__dirname是nodejs提供的变量
@@ -34,8 +34,8 @@ function createModuleIdFactory() {
     let regExp = pathSep == '\\' ? new RegExp('\\\\', "gm") : new RegExp(pathSep, "gm");
     name = name.replace(regExp, '_');
     console.log('regExp name:' + name);
-    //名称加密
-    if (isEncrypt) {
+    //名称MD5
+    if (isMD5) {
       name = md5(name);
       console.log('encryptName:' + name);
     // } else {

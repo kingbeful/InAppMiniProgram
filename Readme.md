@@ -25,6 +25,11 @@ When app startup, it will load the basic bundle in background. And the first scr
 
 When user click on the native UI and the screen changing to the one of the business screen. The business screen will load business bundle. The size is much smaller than the basic bundle and will load very fast.
 
+## Tricks
+
+1. Android app to debug with the bundle in assets. You need to change the return value of **getUseDeveloperSupport** to false, and comment the line **apply from: "../../node_modules/react-native/react.gradle"** in app/build.gradle
+
+2. Using the bundle.sh to generate all the bundles
 
 ## Todos
 

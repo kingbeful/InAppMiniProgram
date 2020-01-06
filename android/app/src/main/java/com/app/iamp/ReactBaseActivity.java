@@ -6,12 +6,13 @@ import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 
 public class ReactBaseActivity extends ReactActivity {
+
     @Override
     protected ReactActivityDelegate createReactActivityDelegate() {
         return new ReactActivityDelegate(this, getMainComponentName()) {
             @Override
             protected void onCreate(Bundle savedInstanceState) {
-                JsBundleLoader.INSTANCE.loadMPBundle(getApplication(), "guide", true);
+                JsBundleLoader.INSTANCE.loadMPBundle(getApplication(), getBundleName());
                 super.onCreate(savedInstanceState);
             }
         };
@@ -19,6 +20,20 @@ public class ReactBaseActivity extends ReactActivity {
 
     @Override
     protected String getMainComponentName() {
-        return "InAppMiniProgram";
+        String name = JsBundleLoader.INSTANCE.getModuleName();
+        if (name != null) {
+            return name;
+        } else {
+            return "InAppMiniProgram";
+        }
+    }
+
+    protected String getBundleName() {
+        String name = JsBundleLoader.INSTANCE.getBundleName();
+        if (name != null) {
+            return name;
+        } else {
+            return "guide";
+        }
     }
 }

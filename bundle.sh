@@ -9,3 +9,6 @@ react-native bundle --platform android --dev false --entry-file src/basics.js --
 
 # create the business bundle --- react native guide
 react-native bundle --platform android --dev false --entry-file src/guide/index.js --bundle-output ./android/app/src/main/assets/guide.android.bundle --assets-dest android/app/src/main/res/ --config business.config.js
+
+# create the business bundle --- react native museum
+react-native bundle --platform android --dev false --entry-file src/museum/index.js --bundle-output ./android/app/src/main/assets/museum.android.bundle --assets-dest android/app/src/main/res/ --config business.config.js

@@ -8,8 +8,8 @@ function createModuleIdFactory() {
   const projectRootPath = __dirname;
   let fileCount = 0;
   return (path) => {
-    console.log('');
-    console.log(path);
+    // console.log('');
+    // console.log(path);
     let name = '';
     // 如果需要去除react-native/Libraries路径去除可以放开下面代码
     // if (path.indexOf('node_modules' + pathSep + 'react-native' + pathSep + 'Libraries' + pathSep) > 0) {
@@ -33,7 +33,7 @@ function createModuleIdFactory() {
     //最后在将斜杠替换为空串或下划线
     let regExp = pathSep == '\\' ? new RegExp('\\\\', "gm") : new RegExp(pathSep, "gm");
     name = name.replace(regExp, '_');
-    console.log('regExp name:' + name);
+    // console.log('regExp name:' + name);
     //名称MD5
     if (isMD5) {
       name = md5(name);
@@ -78,13 +78,13 @@ function processModuleFilter(module) {
       console.log(module['path'],' will in the pack')
       return true;
     }
-    if (module['path'].indexOf('node_modules' + pathSep + 'react-native' + pathSep + 'Libraries' ) > 0) {
-      console.log(module['path'],' will in the pack(as Library)')
-      return true
-    }
+    // if (module['path'].indexOf('node_modules' + pathSep + 'react-native' + pathSep + 'Libraries' + pathSep + 'NewAppScreen' ) > 0) {
+    //   console.log(module['path'],' will in the pack(as Library)')
+    //   return true
+    // }
     return false;
   }
-  console.log(module.path)
+  // console.log(module.path)
   //其他就是应用代码
   return true;
 }

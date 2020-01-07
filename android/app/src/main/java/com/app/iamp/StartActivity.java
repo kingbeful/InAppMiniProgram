@@ -16,7 +16,7 @@ public class StartActivity extends AppCompatActivity implements NormalAdapter.On
             "react native quick start",
             "museum local",
             "museum http",
-            "ddd",
+            "navigation",
             "eee",
             "fff",
             "aaa",
@@ -95,6 +95,17 @@ public class StartActivity extends AppCompatActivity implements NormalAdapter.On
 
                                 }
                             });
+        } else if (position == 3) {
+            JsBundleLoader.INSTANCE
+                    .setLoadStatus(true) //load the bundle from assets
+                    .setBundleName("navigation")
+                    .setModuleName("navigation");
+
+            Intent intent = new Intent(this, ReactBaseActivity.class);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         }
     }
 }

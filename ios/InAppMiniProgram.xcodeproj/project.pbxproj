@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* InAppMiniProgramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* InAppMiniProgramTests.m */; };
 		0AF3921823C47CBC00083D7D /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3921623C47CBC00083D7D /* StartViewController.m */; };
+		0AF3926323C5BF4000083D7D /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
+		0AF3926823C5DD0B00083D7D /* guide.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0AF3926723C5DD0B00083D7D /* guide.bundle */; };
+		0AF3926A23C5DF0400083D7D /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF3926923C5DF0400083D7D /* assets */; };
+		0AF3926E23C5E18A00083D7D /* museum.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0AF3926D23C5E18A00083D7D /* museum.bundle */; };
+		0AF3927023C5E1C300083D7D /* navigation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0AF3926F23C5E1C300083D7D /* navigation.bundle */; };
+		0AF3927523C5FCCA00083D7D /* RNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3927323C5FCCA00083D7D /* RNViewController.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -47,6 +53,13 @@
 		00E356F21AD99517003FC87E /* InAppMiniProgramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppMiniProgramTests.m; sourceTree = "<group>"; };
 		0AF3921623C47CBC00083D7D /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		0AF3921923C47CD900083D7D /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		0AF3926623C5DAA800083D7D /* RCTBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTBridge.h; sourceTree = "<group>"; };
+		0AF3926723C5DD0B00083D7D /* guide.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = guide.bundle; path = InAppMiniProgram/guide.bundle; sourceTree = "<group>"; };
+		0AF3926923C5DF0400083D7D /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = InAppMiniProgram/assets; sourceTree = "<group>"; };
+		0AF3926D23C5E18A00083D7D /* museum.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = museum.bundle; path = InAppMiniProgram/museum.bundle; sourceTree = "<group>"; };
+		0AF3926F23C5E1C300083D7D /* navigation.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = navigation.bundle; path = InAppMiniProgram/navigation.bundle; sourceTree = "<group>"; };
+		0AF3927323C5FCCA00083D7D /* RNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNViewController.m; sourceTree = "<group>"; };
+		0AF3927423C5FCCA00083D7D /* RNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNViewController.h; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* InAppMiniProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppMiniProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = InAppMiniProgram/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = InAppMiniProgram/AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +141,7 @@
 		0AF3921323C47CBC00083D7D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				0AF3927123C5FCCA00083D7D /* ReactNaitve */,
 				0AF3921423C47CBC00083D7D /* Start */,
 			);
 			name = Module;
@@ -147,6 +161,7 @@
 		0AF3921523C47CBC00083D7D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0AF3926623C5DAA800083D7D /* RCTBridge.h */,
 				0AF3921623C47CBC00083D7D /* StartViewController.m */,
 				0AF3921923C47CD900083D7D /* StartViewController.h */,
 			);
@@ -167,9 +182,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0AF3927123C5FCCA00083D7D /* ReactNaitve */ = {
+			isa = PBXGroup;
+			children = (
+				0AF3927223C5FCCA00083D7D /* Controller */,
+			);
+			path = ReactNaitve;
+			sourceTree = "<group>";
+		};
+		0AF3927223C5FCCA00083D7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AF3927323C5FCCA00083D7D /* RNViewController.m */,
+				0AF3927423C5FCCA00083D7D /* RNViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* InAppMiniProgram */ = {
 			isa = PBXGroup;
 			children = (
+				0AF3926923C5DF0400083D7D /* assets */,
+				0AF3926723C5DD0B00083D7D /* guide.bundle */,
+				0AF3926F23C5E1C300083D7D /* navigation.bundle */,
+				0AF3926D23C5E18A00083D7D /* museum.bundle */,
 				0AF3921323C47CBC00083D7D /* Module */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -384,7 +420,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF3926A23C5DF0400083D7D /* assets in Resources */,
+				0AF3926323C5BF4000083D7D /* main.jsbundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				0AF3927023C5E1C300083D7D /* navigation.bundle in Resources */,
+				0AF3926E23C5E18A00083D7D /* museum.bundle in Resources */,
+				0AF3926823C5DD0B00083D7D /* guide.bundle in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -576,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF3927523C5FCCA00083D7D /* RNViewController.m in Sources */,
 				0AF3921823C47CBC00083D7D /* StartViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,

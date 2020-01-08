@@ -29,7 +29,16 @@ When user click on the native UI and the screen changing to the one of the busin
 
 1. Android app to debug with the bundle in assets. You need to change the return value of **getUseDeveloperSupport** to false, and comment the line **apply from: "../../node_modules/react-native/react.gradle"** in app/build.gradle
 
-2. Using the bundle.sh to generate all the bundles
+2. Using the bundle.sh to generate all the bundles. To generate the platform bundle you should use the script like below before install the app.
+
+```bash
+# to generate the ios bundle
+./bundle.sh ios
+
+# to generate the android bundle
+./bundle.sh android
+
+```
 
 ## Todos
 

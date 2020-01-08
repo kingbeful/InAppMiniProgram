@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StartViewController : UIViewController
-
+- (instancetype)initWithBridge:(RCTBridge *)bridge;
 @end
 
 #endif /* StartViewController_h */

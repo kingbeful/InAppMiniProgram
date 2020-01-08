@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* InAppMiniProgramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* InAppMiniProgramTests.m */; };
+		0AF3921823C47CBC00083D7D /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3921623C47CBC00083D7D /* StartViewController.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -44,6 +45,8 @@
 		00E356EE1AD99517003FC87E /* InAppMiniProgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppMiniProgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* InAppMiniProgramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppMiniProgramTests.m; sourceTree = "<group>"; };
+		0AF3921623C47CBC00083D7D /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		0AF3921923C47CD900083D7D /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* InAppMiniProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppMiniProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = InAppMiniProgram/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = InAppMiniProgram/AppDelegate.m; sourceTree = "<group>"; };
@@ -122,9 +125,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0AF3921323C47CBC00083D7D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				0AF3921423C47CBC00083D7D /* Start */,
+			);
+			name = Module;
+			path = InAppMiniProgram/Module;
+			sourceTree = "<group>";
+		};
+		0AF3921423C47CBC00083D7D /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				0AF3922123C4882B00083D7D /* Model */,
+				0AF3921A23C4839700083D7D /* View */,
+				0AF3921523C47CBC00083D7D /* Controller */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		0AF3921523C47CBC00083D7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AF3921623C47CBC00083D7D /* StartViewController.m */,
+				0AF3921923C47CD900083D7D /* StartViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0AF3921A23C4839700083D7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AF3922123C4882B00083D7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* InAppMiniProgram */ = {
 			isa = PBXGroup;
 			children = (
+				0AF3921323C47CBC00083D7D /* Module */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -530,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF3921823C47CBC00083D7D /* StartViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);

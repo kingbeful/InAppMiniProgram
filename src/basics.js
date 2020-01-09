@@ -5,3 +5,16 @@ import 'react-native-gesture-handler';
 import 'react-navigation';
 import 'react-navigation-stack';
 import 'react-navigation-tabs';
+import 'react-native-vector-icons'
+import 'react-native-vector-icons/AntDesign'
+import 'react-native-vector-icons/Entypo'
+import 'react-native-vector-icons/EvilIcons'
+import 'react-native-vector-icons/Feather'
+import 'react-native-vector-icons/FontAwesome'
+import 'react-native-vector-icons/Foundation'
+import 'react-native-vector-icons/Ionicons'
+import 'react-native-vector-icons/MaterialIcons'
+import 'react-native-vector-icons/MaterialCommunityIcons'
+import 'react-native-vector-icons/SimpleLineIcons'
+import 'react-native-vector-icons/Octicons'
+import 'react-native-vector-icons/Zocial'

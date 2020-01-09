@@ -41,6 +41,8 @@ target 'InAppMiniProgram' do
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
 
   pod 'RNScreens', :path => '../node_modules/react-native-screens'
+  
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'InAppMiniProgramTests' do
     inherit! :search_paths

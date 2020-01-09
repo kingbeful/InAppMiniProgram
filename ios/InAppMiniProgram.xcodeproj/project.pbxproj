@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* InAppMiniProgramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* InAppMiniProgramTests.m */; };
+		0A1F17B723C7086200FE596E /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F17B623C7086200FE596E /* MyNavigationController.m */; };
 		0AF3921823C47CBC00083D7D /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3921623C47CBC00083D7D /* StartViewController.m */; };
 		0AF3926323C5BF4000083D7D /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
 		0AF3926823C5DD0B00083D7D /* guide.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0AF3926723C5DD0B00083D7D /* guide.bundle */; };
@@ -51,6 +52,8 @@
 		00E356EE1AD99517003FC87E /* InAppMiniProgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppMiniProgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* InAppMiniProgramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppMiniProgramTests.m; sourceTree = "<group>"; };
+		0A1F17B523C7086200FE596E /* MyNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		0A1F17B623C7086200FE596E /* MyNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
 		0AF3921623C47CBC00083D7D /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		0AF3921923C47CD900083D7D /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		0AF3926623C5DAA800083D7D /* RCTBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTBridge.h; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 			children = (
 				0AF3927123C5FCCA00083D7D /* ReactNaitve */,
 				0AF3921423C47CBC00083D7D /* Start */,
+				0A1F17B523C7086200FE596E /* MyNavigationController.h */,
+				0A1F17B623C7086200FE596E /* MyNavigationController.m */,
 			);
 			name = Module;
 			path = InAppMiniProgram/Module;
@@ -621,6 +626,7 @@
 				0AF3921823C47CBC00083D7D /* StartViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				0A1F17B723C7086200FE596E /* MyNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import "StartViewController.h"
+#import "MyNavigationController.h"
 
 @implementation AppDelegate
 
@@ -27,7 +28,7 @@
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   StartViewController *rootViewController = [[StartViewController alloc] initWithBridge:bridge];
-  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+  MyNavigationController *navigationController = [[MyNavigationController alloc] initWithRootViewController:rootViewController];
   self.window.rootViewController = navigationController;
   [self.window makeKeyAndVisible];
   

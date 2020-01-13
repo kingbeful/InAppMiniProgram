@@ -44,7 +44,8 @@
       @{@"title":@"react native", @"subtitle": @"a react native quick starter", @"moduleName": @"InAppMiniProgram", @"bundleName": @"guide"},
       @{@"title":@"museum local", @"subtitle": @"load the bundle from local file system", @"moduleName": @"museum", @"bundleName": @"museum"},
       @{@"title":@"museum http", @"subtitle": @"load the bundle from remote server", @"moduleName": @"museum", @"bundleName": @"museum"},
-      @{@"title":@"navigation", @"subtitle": @"react navigation sample", @"moduleName": @"navigation", @"bundleName": @"navigation"}
+      @{@"title":@"navigation", @"subtitle": @"react navigation sample", @"moduleName": @"navigation", @"bundleName": @"navigation"},
+      @{@"title":@"sashimi", @"subtitle": @"a sashimi shop demo", @"moduleName": @"sashimi", @"bundleName": @"sashimi"}
   ];
   NSLog(@"viewDidLoad");
   self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT) style:UITableViewStylePlain];
@@ -83,6 +84,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   NSString * moduleName = [_dataSource[indexPath.row] objectForKey:@"moduleName"];
   NSString * bundleName = [_dataSource[indexPath.row] objectForKey:@"bundleName"];
+#if DEBUG
+//#else
   if (![_isBundleLoaded objectForKey:bundleName]) {
     // bundle is not loaded
     NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:bundleName withExtension:@"bundle"];
@@ -90,10 +93,14 @@
     NSData *sourceBuz = [NSData dataWithContentsOfFile:jsCodeLocation.path
                                                options:NSDataReadingMappedIfSafe
                                                  error:&error];
-    [_bridge.batchedBridge executeSourceCode:sourceBuz sync:NO];
-    [_isBundleLoaded setValue:moduleName forKey:bundleName];
+    if (error) {
+      NSLog(@"Error to get source code");
+    } else {
+      [_bridge.batchedBridge executeSourceCode:sourceBuz sync:NO];
+      [_isBundleLoaded setValue:moduleName forKey:bundleName];
+    }
   }
-  
+#endif
   RNViewController *rootViewController = [RNViewController new];
   RCTRootView* rootView = [[RCTRootView alloc] initWithBridge:_bridge moduleName:moduleName initialProperties:nil];
   

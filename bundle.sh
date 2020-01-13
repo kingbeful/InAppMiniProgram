@@ -28,4 +28,7 @@ else
 
     # create the business bundle --- navigation
     react-native bundle --platform $1 --dev false --entry-file src/navigation/index.js --bundle-output ./ios/InAppMiniProgram/navigation.bundle --assets-dest ios/InAppMiniProgram/ --config business.config.js
+
+    # create the business bundle --- sashimi
+    react-native bundle --platform $1 --dev false --entry-file src/sashimi/index.js --bundle-output ./ios/InAppMiniProgram/sashimi.bundle --assets-dest ios/InAppMiniProgram/ --config business.config.js
 fi

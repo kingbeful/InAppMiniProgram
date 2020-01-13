@@ -54,6 +54,10 @@ https://juejin.im/post/5cee0095f265da1b6d4006ec
 
 https://www.jianshu.com/p/3013e3b9ebd7
 
+https://juejin.im/post/5ce79475f265da1b860861fd
+
+https://github.com/smallnew/react-native-multibundler
+
 
 ## License MIT
 

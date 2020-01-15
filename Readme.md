@@ -40,6 +40,41 @@ When user click on the native UI and the screen changing to the one of the busin
 
 ```
 
+3. To debug the iOS app and load the data from the local server, you should uncomment the code in two files
+
+**StartViewController.m**
+
+```objective-c
+
+...
+
+#if DEBUG
+//#else             <- uncomment this line
+  if (![_isBundleLoaded objectForKey:bundleName]) {
+
+...
+
+```
+
+**AppDelegate.m**
+
+```objective-c
+
+...
+
+#if DEBUG
+
+//   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+// #else
+  jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+#endif
+
+...
+
+```
+
+after doing these 2 steps, start the react native server by command: **react-native start** and then press Command + R to build the iOS app
+
 ## Todos
 
 1. add test case

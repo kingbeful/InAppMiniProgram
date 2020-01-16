@@ -63,7 +63,7 @@ When user click on the native UI and the screen changing to the one of the busin
 ...
 
 #if DEBUG
-
+// uncomment below 2 lines
 //   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 // #else
   jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];

@@ -38,14 +38,14 @@ const data = [
 ]
 
 const comments = [
-  {name: 'Ablee Morcy', text: 'It\'s delecious', avatar: require('./images/avatar/avatar1.jpg')},
-  {name: 'Blue Odden', text: 'I love this sashimi', avatar: require('./images/avatar/avatar2.jpg')},
-  {name: 'Cavin Pattric', text: 'Will come next time', avatar: require('./images/avatar/avatar3.jpg')},
-  {name: 'David Rich', text: 'This is the best sashimi I ever had', avatar: require('./images/avatar/avatar4.jpg')},
-  {name: 'Eric Santos', text: 'It\'s delecious', avatar: require('./images/avatar/avatar5.jpg')},
-  {name: 'Fabidal Terna', text: 'I love this sashimi', avatar: require('./images/avatar/avatar6.jpg')},
-  {name: 'Galleo\'s Uncle', text: 'Will come next time', avatar: require('./images/avatar/avatar7.jpg')},
-  {name: 'Henry Veca', text: 'This is the best sashimi I ever had', avatar: require('./images/avatar/avatar8.jpg')}
+  {name: 'Ablee Morcy', text: 'It\'s delecious', avatar: 'https://github.com/kingbeful/InAppMiniProgram/raw/master/src/sashimi/images/avatar/avatar1.jpg'},
+  {name: 'Blue Odden', text: 'I love this sashimi', avatar: 'https://github.com/kingbeful/InAppMiniProgram/raw/master/src/sashimi/images/avatar/avatar2.jpg'},
+  {name: 'Cavin Pattric', text: 'Will come next time', avatar: 'https://github.com/kingbeful/InAppMiniProgram/raw/master/src/sashimi/images/avatar/avatar3.jpg'},
+  {name: 'David Rich', text: 'This is the best sashimi I ever had', avatar: 'https://github.com/kingbeful/InAppMiniProgram/raw/master/src/sashimi/images/avatar/avatar4.jpg'},
+  {name: 'Eric Santos', text: 'It\'s delecious', avatar: 'https://github.com/kingbeful/InAppMiniProgram/raw/master/src/sashimi/images/avatar/avatar5.jpg'},
+  {name: 'Fabidal Terna', text: 'I love this sashimi', avatar: 'https://github.com/kingbeful/InAppMiniProgram/raw/master/src/sashimi/images/avatar/avatar6.jpg'},
+  {name: 'Galleo\'s Uncle', text: 'Will come next time', avatar: 'https://github.com/kingbeful/InAppMiniProgram/raw/master/src/sashimi/images/avatar/avatar7.jpg'},
+  {name: 'Henry Veca', text: 'This is the best sashimi I ever had', avatar: 'https://github.com/kingbeful/InAppMiniProgram/raw/master/src/sashimi/images/avatar/avatar8.jpg'}
 ]
 
 
@@ -111,7 +111,7 @@ class RecommendPage extends Component {
           <Text style={{fontSize:24, color:'white'}}> {item.name} </Text>
           <Text style={{fontSize:18, color:'gray', marginTop:8, marginLeft:8}}>{item.text}</Text>
         </View>
-        <Image style={{width:48, height:48, borderRadius:24, borderColor: 'white', borderWidth: 2}} source={item.avatar}/>
+        <Image style={{width:48, height:48, borderRadius:24, borderColor: 'white', borderWidth: 2}} source={{ uri:item.avatar }}/>
       </View>)
     }
 

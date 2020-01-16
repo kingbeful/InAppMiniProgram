@@ -37,6 +37,18 @@ const data = [
   {name:'Tuna', jpName:'まぐろ', src: require('./images/sushi/tuna.png'), price:19}
 ]
 
+const comments = [
+  {name: 'Ablee Morcy', text: 'It\'s delecious', avatar: require('./images/avatar/avatar1.jpg')},
+  {name: 'Blue Odden', text: 'I love this sashimi', avatar: require('./images/avatar/avatar2.jpg')},
+  {name: 'Cavin Pattric', text: 'Will come next time', avatar: require('./images/avatar/avatar3.jpg')},
+  {name: 'David Rich', text: 'This is the best sashimi I ever had', avatar: require('./images/avatar/avatar4.jpg')},
+  {name: 'Eric Santos', text: 'It\'s delecious', avatar: require('./images/avatar/avatar5.jpg')},
+  {name: 'Fabidal Terna', text: 'I love this sashimi', avatar: require('./images/avatar/avatar6.jpg')},
+  {name: 'Galleo\'s Uncle', text: 'Will come next time', avatar: require('./images/avatar/avatar7.jpg')},
+  {name: 'Henry Veca', text: 'This is the best sashimi I ever had', avatar: require('./images/avatar/avatar8.jpg')}
+]
+
+
 class RecommendPage extends Component {
   constructor() {
     super()
@@ -92,6 +104,17 @@ class RecommendPage extends Component {
       </View>)
     }
 
+  renderCommentItem = ({ item, index, separators }) => {
+    return (
+      <View style={{height:Header_HEIGHT+16, width:width, paddingHorizontal:32, flexDirection: 'row', alignItems: 'center'}}>
+        <View style={{alignItems: 'flex-start', flex:1}}>
+          <Text style={{fontSize:24, color:'white'}}> {item.name} </Text>
+          <Text style={{fontSize:18, color:'gray', marginTop:8, marginLeft:8}}>{item.text}</Text>
+        </View>
+        <Image style={{width:48, height:48, borderRadius:24, borderColor: 'white', borderWidth: 2}} source={item.avatar}/>
+      </View>)
+    }
+
   getSeparator = () => {
     return <View style={{backgroundColor:'transparent', width:ITEM_GAP}} />
   }
@@ -128,15 +151,28 @@ class RecommendPage extends Component {
             />
           </View>
         </View>
-        <Animated.View style={{height:Header_HEIGHT+16, backgroundColor:'blue'}}>
-        </Animated.View>
+        <View style={{height:Header_HEIGHT+16, backgroundColor:'black'}}>
+          <FlatList
+            ref={ref => this.flatListRef = ref}
+            pagingEnabled
+            data={comments}
+            renderItem={this.renderCommentItem}
+            keyExtractor={item => item.name}
+            scrollEnabled={false}
+          />
+        </View>
       	<FlatList
           data={data}
           decelerationRate={'fast'}
           snapToInterval={SNAP_DISTANCE}
           snapToAlignment={"start"}
           onMomentumScrollBegin={()=> {console.log('onMomentumScrollBegin')}}
-          onMomentumScrollEnd={()=>{console.log('onMomentumScrollEnd')}}
+          onMomentumScrollEnd={(e)=>{
+            const x = e.nativeEvent.contentOffset.x
+            const index = Math.floor(x/SNAP_DISTANCE)
+            console.log(x, index)
+            this.flatListRef.scrollToIndex({animated:true, index:index, viewOffset:0, viewPosition:0})
+          }}
           onViewableItemsChanged={this.onViewItemChanged}
           ListHeaderComponent={this.renderHeader}
           ListFooterComponent={this.renderHeader}
@@ -166,7 +202,7 @@ const styles = StyleSheet.create({
     marginTop:STATUSBAR_HEIGHT
   },
   searchContainer: {
-    width:width-32,
+    width:width-64,
     height:Header_HEIGHT-24,
     borderRadius:Header_HEIGHT/2 - 12,
     flexDirection: 'row',

@@ -75,6 +75,18 @@ When user click on the native UI and the screen changing to the one of the busin
 
 after doing these 2 steps, start the react native server by command: **react-native start** and then press Command + R to build the iOS app
 
+
+## FAQ
+
+### iOS
+
+- Why I got error message **Failed to execute 'importScripts' on 'WorkerGlobalScope' when using main.jsbundle on iOS simulator** ?
+
+A: That's because you want debug the offline bundle in chrome. Please Command + D to disable it, and then rerun the app with Command + R
+
+
+### android
+
 ## Todos
 
 1. add test case
